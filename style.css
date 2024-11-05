@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-primary: #4266f5;
+  --clr-secondary: #d4d5d8;
+  --clr-accent: #695efd;
+
+  --txt-clr-light: #fff;
+  --txt-clr-light-dimmed: #d1d1d1;
+
+  --txt-clr-accent: #4266f5;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
+}
+
+a {
+  font-size: inherit;
+  color: inherit;
+  font-family: Poppins, sans-serif;
+}
+
+button {
+  padding: 1em 2em;
+  background-color: var(--clr-accent);
+  border: none;
+  border-radius: 10px;
+  color: var(--txt-clr-light);
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header,
+main > * {
+  padding: 1rem 10rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-primary);
+  color: var(--txt-clr-light);
+}
+
+header .logo {
+  letter-spacing: 3px;
+  font-size: 3rem;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+main .hero {
+  background-image: url("img/hero-bg.jpg");
+  background-size: cover;
+  min-height: 33rem;
+  position: relative;
+}
+
+main .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: #00000096;
+}
+
+main .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: var(--txt-clr-light);
+}
+
+main .hero > * {
+  z-index: 2;
+  transform: translateY(-5rem);
+}
+
+main .hero .heading {
+  font-size: 3rem;
+}
+
+main .hero .message {
+  font-size: 1.3rem;
+  color: var(--txt-clr-light-dimmed);
+  margin-bottom: 2rem;
+}
+
+/* HOUSES / SERVICES */
+main .houses {
+  margin: 10rem 0;
+}
+
+main .houses .heading {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--txt-clr-light);
+  background-color: var(--clr-primary);
+  padding: 0.5em 0;
+  border-radius: 5px;
+}
+
+main .houses .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: start;
+  gap: 1rem;
+}
+
+main .houses .house {
+  height: 10rem;
+  display: flex;
+  box-shadow: 0 0 3px #000;
+}
+
+main .houses .house img {
+  aspect-ratio: 16/ 9;
+  max-width: 100%;
+  height: auto;
+}
+
+main .review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--clr-secondary);
+  padding: 5rem;
+}
+
+main .review .messsage {
+  width: 70ch;
+}
+
+main .review .sender {
+  font-style: italic;
+  align-self: end;
+}
+
+main .cta {
+  margin: 10rem auto;
+  background-color: var(--clr-primary);
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
+
+  box-shadow: 0px 0px 3px #000;
+}
+
+main .cta .heading {
+  color: var(--txt-clr-light);
+  font-size: 1.2rem;
+}
+
+main .cta .cta-button {
+  background-color: var(--txt-clr-light);
+  color: #000;
+}
+
+footer {
+  background-color: #333;
+  padding: 1rem;
+  color: var(--txt-clr-light);
+  text-align: center;
+}
